@@ -797,6 +797,75 @@
       color: var(--dark);
     }
 
+    .contact-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 220px;
+      gap: 28px;
+      align-items: center;
+      padding: 30px;
+      border: 1px solid rgba(243, 245, 240, 0.14);
+      border-radius: var(--radius);
+      background: rgba(243, 245, 240, 0.045);
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .contact-item {
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(243, 245, 240, 0.12);
+    }
+
+    .contact-item:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .contact-label {
+      display: block;
+      margin-bottom: 6px;
+      color: rgba(243, 245, 240, 0.48);
+      font-family: var(--font-en);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .contact-value {
+      color: var(--paper);
+      font-family: var(--font-serif);
+      font-size: 25px;
+      line-height: 1.35;
+      word-break: break-all;
+    }
+
+    .qr-card {
+      padding: 14px;
+      border-radius: var(--radius);
+      background: var(--paper);
+      color: var(--dark);
+      text-align: center;
+    }
+
+    .qr-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+
+    .qr-card span {
+      display: block;
+      margin-top: 10px;
+      color: var(--ink-soft);
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
     .next-panel {
       border: 1px solid rgba(243, 245, 240, 0.14);
       border-radius: var(--radius);
@@ -850,6 +919,7 @@
       .case-layout,
       .case-grid,
       .section-head,
+      .contact-panel,
       .closing-inner {
         grid-template-columns: 1fr;
       }
@@ -890,6 +960,10 @@
         grid-template-columns: 1fr;
         gap: 10px;
       }
+
+      .qr-card {
+        max-width: 240px;
+      }
     }
 
     @media (max-width: 640px) {
@@ -919,6 +993,10 @@
 
       .case-content {
         padding: 24px;
+      }
+
+      .contact-panel {
+        padding: 22px;
       }
 
       .portrait {
@@ -1131,6 +1209,34 @@
             </div>
           </div>
         </article>
+      </div>
+    </section>
+
+    <section id="contact" class="closing">
+      <div class="closing-inner wrap">
+        <div>
+          <p class="eyebrow">CONTACT</p>
+          <h2>想一起搭内容生产系统<br />可以直接联系我</h2>
+          <p>
+            如果你想报名学习 AI 内容工具，或希望定制内容工作流 账号系统 工具工作台，可以通过电话或微信联系我。
+          </p>
+        </div>
+        <div class="contact-panel">
+          <div class="contact-list">
+            <div class="contact-item">
+              <span class="contact-label">Mobile</span>
+              <a class="contact-value" href="tel:15705986564">15705986564</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">WeChat</span>
+              <span class="contact-value">Y695461477</span>
+            </div>
+          </div>
+          <div class="qr-card">
+            <img src="assets/contact/wechat-qr.png" alt="屿鹿微信二维码" />
+            <span>扫码添加微信</span>
+          </div>
+        </div>
       </div>
     </section>
   </main>
